@@ -1,0 +1,35 @@
+@import "~bootstrap/scss/bootstrap";
+@import "custom";
+// my sass files
+@import "apploader";
+@import "hamburguer";
+
+body {
+  background-color: antiquewhite;
+
+  #app {
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    [data-reactroot] {
+      height: 100vh;
+    }
+
+    nav {
+      @include media-breakpoint-up(lg) {
+        height: 65px;
+      }
+    }
+
+    .home-container {
+      height: calc(100% - 65px);
+
+      .home-content-container {
+        height: calc(100% - 65px);
+      }
+    }
+  }
+}
